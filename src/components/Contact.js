@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { InputGroup } from 'react-bootstrap';
 
 function ContactMe() {
     return (
@@ -22,6 +23,10 @@ function ContactMe() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
+      <InputGroup>
+        <InputGroup.Text>With textarea</InputGroup.Text>
+        <Form.Control as="textarea" aria-label="With textarea" />
+      </InputGroup>
     </Form>
       );
 }
