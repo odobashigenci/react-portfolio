@@ -17,17 +17,10 @@ code {
   display: flex;
 }
 
-.description {
-  margin: auto;
-  width: 50vw;
+.myFooter {
+  position: fixed;
+  left:0;
+  bottom:0;
+  right:0;
 }
 
-.pPicture {
-  border: dotted;
-  border-color: grey;
-  border-radius: 50%;
-  height: 200px;
-  margin: auto 50px auto;
-  padding: 5px;
-  width: 200px;
-}
