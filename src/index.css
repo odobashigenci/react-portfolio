@@ -24,3 +24,11 @@ code {
   right:0;
 }
 
+.divider {
+  border-top: 3px solid;
+  color:rgb(10, 15, 14);
+  margin: 10px auto;
+  width: 50%;
+}
+
+
