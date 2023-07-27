@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import emailjs from 'emailjs-com'; // Import the emailjs-com library
+import emailjs from 'emailjs-com'; 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
