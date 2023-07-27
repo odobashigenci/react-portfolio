@@ -8,7 +8,7 @@ function Home() {
   const loading = false;
   
   return (
-    <div>
+    <div className="home">
        <Figure>
       <Figure.Image 
       width={200}height={212}
