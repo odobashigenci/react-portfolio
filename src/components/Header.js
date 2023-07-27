@@ -31,7 +31,7 @@ function Header() {
                 <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/porfolio">Portfolio</a>
+                            <a className="nav-link active" aria-current="page" href="/portfolio">Portfolio</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/resume">Resume</a>
