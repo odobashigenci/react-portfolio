@@ -1,6 +1,9 @@
+:root {
+  background-color: #F6F4EB;
+}
+
 body {
-  background-color: red;
-  margin: 0;
+    margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -54,5 +57,41 @@ code {
 .home {
   margin-left: 100px;
 }
+
+/* Footer.js */
+
+.myFooter {
+  backdrop-filter: blur(1px);
+  background-color: rgba(81, 141, 175, 0.7);
+  border-radius: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 18%;
+}
+
+.contactIcons {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  height: 40px;
+  width: 60px;
+}
+
+.icon {
+  color: white;
+}
+
+
+.linkedin .icon:hover {
+   color: #1469c7;
+ }
+
+.gmail .icon:hover {
+   color: #D44638;
+}
+
+.github .icon:hover {
+  color: black;
+ }
 
 
