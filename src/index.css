@@ -1,4 +1,5 @@
 :root {
+  align-items: center;
   background-color: #F6F4EB;
 }
 
@@ -21,12 +22,6 @@ code {
   display: flex;
 }
 
-.myFooter {
-  position: fixed;
-  left:0;
-  bottom:0;
-  right:0;
-}
 
 .divider {
   border-top: 3px solid;
@@ -35,27 +30,61 @@ code {
   width: 50%;
 }
 
-.head {
-  background-color: rgb(35, 102, 160);
-}
 
 /* Header.js */
 
-.navbar {
-  
+.myRuler {
+  border-top: 3px solid;
+  color:rgb(10, 15, 14);
+  margin: 10px auto;
+  width: 70%;
+}
+
+.navbar { 
   background-color: #749BC2;
   border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.3rem;
   font-weight: bold;
   width: 70%;
 }
 
-.navbar a {
-  color: white;
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-.home {
-  margin-left: 100px;
+/* Home.js */
+
+.name {
+  color: white;
+  margin: auto 80px;
+}
+
+.home-page {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.pPicture {
+  margin: 30px auto;
+  width: 250px;
+}
+
+.pPicture img {
+  border: none;
+  width: 100%;
+}
+
+.aboutMe {
+  font-size: 1.5rem;
+  margin: auto auto auto -100px;
+  width: 60vw;
 }
 
 /* Footer.js */
@@ -64,8 +93,13 @@ code {
   backdrop-filter: blur(1px);
   background-color: rgba(81, 141, 175, 0.7);
   border-radius: 50px;
+  bottom:0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+  left:0;
   margin: auto;
   margin-bottom: 20px;
+  position: fixed;
+  right:0;
   width: 18%;
 }
 
