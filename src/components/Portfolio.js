@@ -1,6 +1,5 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import cubCarePreview from "../assets/cubCarePreview.png"
 import breakMyIntakePreview from "../assets/breakMyIntakePreview.png"
 import bitesNBoozePreview from "../assets/bitesNBoozePreview.png"
