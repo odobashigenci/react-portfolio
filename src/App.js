@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer'
-import Portfolio from './components/Portfolio';
-import ContactMe from './components/Contact';
+import Portfolio from './pages/Portfolio';
+import ContactMe from './pages/Contact';
 
 function App() {
   return (

@@ -35,25 +35,47 @@ const ContactForm = () => {
       <h3>Contact me</h3>
       <hr className="divider" /> 
       
-      <div>
-  
-      <Form id="contact-form" onSubmit={handleSubmit} style={{width: '50%', margin: 'auto'}}>
+      <div className='contactMe d-flex justify-content-center'>
+      <div className=''>
+      <Form id="contact-form" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlForm.Control1">
             <Form.Control type="hidden" name="contact_number" />
-            <Form.Label>Name</Form.Label>
+            <Form.Label className='mt-5'>Name</Form.Label>
             <Form.Control type="text" name="from_name" />
-            <Form.Label>Email</Form.Label>
+            <Form.Label className='mt-4'>Email</Form.Label>
             <Form.Control type="email" name="reply_to" />
-            <Form.Label>Message</Form.Label>
-            <Form.Control as="textarea" name="message" rows={3} /> 
-            <Button variant="primary" type="submit">
+            <Form.Label className='mt-4'>Message</Form.Label>
+            <Form.Control className='mb-5' as="textarea" name="message" rows={3} /> 
+            <Button
+              style={{
+                backgroundColor: 'rgba(81, 141, 175, 0.7)',
+                borderColor: 'grey',
+                borderRadius: '20px',
+                color: 'white',
+                fontFamily: 'Montserrat',
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                transition: '0.2s ease-out',
+                padding: '1px',
+                width: '200px',
+              }}
+              className='submit-data'
+              variant="primary"
+              type="submit"
+            >
               Submit
             </Button>
             {isFormSubmitted && <p>Form submitted successfully!</p>}
           </Form.Group>
         </Form>
+        <div className='privacy-note'>
+          Please note!<br/>
+          After you click the "Submit" button, every personal data you are entering (name, email, message) will be sent directly to my email address. <br/> 
+          Please rest assured that your data WILL NOT be shared with third parties.<br/>
+          Your privacy is important to me!
+        </div>
     </div>
-      
+    </div>
     </div>
   );
 };

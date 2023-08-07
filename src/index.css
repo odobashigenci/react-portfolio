@@ -49,6 +49,10 @@ code {
   width: 70%;
 }
 
+.nav-link {
+  font-family: 'Montserrat';
+}
+
 .nav-link:hover {
   text-decoration: underline;
 }
@@ -85,6 +89,24 @@ code {
   font-size: 1.5rem;
   margin: auto auto auto -100px;
   width: 60vw;
+}
+
+/* Contact.js */
+
+.contactMe {
+  margin: 20px auto;
+  /* width: 10%; */
+}
+
+.submit-data:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(-0.05rem);
+  transition: 0.4s ease out;
+}
+
+.privacy-note {
+  font-size: 0.7rem;
+  width: 100%;
 }
 
 /* Footer.js */
@@ -127,5 +149,24 @@ code {
 .github .icon:hover {
   color: black;
  }
+
+/* Portfolio.js */
+
+.carouselImage {
+  border-radius: 5px;
+}
+
+.project-card {
+  height: auto;
+  width: 800px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.522); 
+  border-radius: 50%;
+}
+
+
 
 

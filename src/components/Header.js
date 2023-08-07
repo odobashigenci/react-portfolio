@@ -2,10 +2,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
-import Home from './Home';
-import Portfolio from './Portfolio';
-import Resume from './Resume';
-import Contact from './Contact';
+import Home from '../pages/Home';
+import Portfolio from '../pages/Portfolio';
+import Resume from '../pages/Resume';
+import Contact from '../pages/Contact';
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
