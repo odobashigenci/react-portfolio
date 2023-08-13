@@ -1,11 +1,16 @@
-// Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
 import Home from '../pages/Home';
 import Portfolio from '../pages/Portfolio';
 import Resume from '../pages/Resume';
 import Contact from '../pages/Contact';
+
+const navigationLinks = [
+  { to: '/', label: 'About' },
+  { to: '/portfolio', label: 'Portfolio' },
+  { to: '/resume', label: 'Resume' },
+  { to: '/contact', label: 'Contact' },
+];
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -26,7 +31,7 @@ function Header() {
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
               aria-controls="navbarNav"
-              aria-expanded="{isMenuOpen}"
+              aria-expanded={isMenuOpen ? 'true' : 'false'}
               onClick={toggleMenu}
               aria-label="Toggle navigation"
             >
@@ -37,26 +42,13 @@ function Header() {
               id="navbarNav"
             >
               <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link className="nav-link text-white" to="/">
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link text-white" to="/portfolio">
-                    Portfolio
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link text-white" to="/resume">
-                    Resume
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link text-white" to="/contact">
-                    Contact
-                  </Link>
-                </li>
+                {navigationLinks.map((link, index) => (
+                  <li className="nav-item" key={index}>
+                    <Link className="nav-link text-white" to={link.to}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
