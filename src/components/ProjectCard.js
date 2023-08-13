@@ -16,7 +16,7 @@ const ProjectCard = ({title, imageSrc, description, githubLink, liveLink}) => {
           <Button variant="primary">Live URL</Button>
         </a>
          </Card.Body>
-         {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
+         
         </Card>
     )
 }
