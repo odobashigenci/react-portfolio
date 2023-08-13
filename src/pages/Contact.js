@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
+import Buttons from "../components/Buttons"
 
 const ContactForm = () => {
   useEffect(() => {
@@ -46,25 +47,14 @@ const ContactForm = () => {
             <Form.Control type="email" name="reply_to" />
             <Form.Label className='mt-4'>Message</Form.Label>
             <Form.Control className='mb-5' as="textarea" name="message" rows={3} /> 
-            <Button
-              style={{
-                backgroundColor: 'rgba(81, 141, 175, 0.7)',
-                borderColor: 'grey',
-                borderRadius: '20px',
-                color: 'white',
-                fontFamily: 'Montserrat',
-                fontSize: '1.5rem',
-                fontWeight: 'bold',
-                transition: '0.2s ease-out',
-                padding: '1px',
-                width: '200px',
-              }}
-              className='submit-data'
+            <Buttons
+             
               variant="primary"
-              type="submit"
+              onClick={handleSubmit}
+              
             >
               Submit
-            </Button>
+            </Buttons>
             {isFormSubmitted && <p>Form submitted successfully!</p>}
           </Form.Group>
         </Form>

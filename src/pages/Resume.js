@@ -6,6 +6,7 @@ import nodeXpressPreview from "../assets/nodeXpressPreview.png";
 import reactPreview from "../assets/reactPreview.png";
 import tailwindPreview from "../assets/tailwindPreview.png";
 import bootstrapPreview from "../assets/bootstrapPreview.png"
+import Buttons from "../components/Buttons"
 
 function handleDownloadResume() {
   const url = "/Resume.pdf";
@@ -29,7 +30,9 @@ function Resume() {
     <div>
       <h3>Find more about my skills and career</h3>
       <hr className="divider" />
-
+      <Buttons variant="primary" className="submit-data" onClick={handleDownloadResume}>
+            Download Resume
+          </Buttons>
       {/* First row of images */}
       <ImageRow images={firstRowImages} />
 
@@ -37,13 +40,9 @@ function Resume() {
       <ImageRow images={secondRowImages} />
 
       {/* Download button */}
-      <div className="d-flex justify-content-center mx-5 my-5">
-        <div className="col-md-3 mt-5">
-          <button className="resume-button" onClick={handleDownloadResume}>
-            Download Resume
-          </button>
-        </div>
-      </div>
+      
+          
+        
     </div>
   );
 }
