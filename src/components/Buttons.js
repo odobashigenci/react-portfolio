@@ -7,7 +7,8 @@ const Buttons = ({ variant, onClick, children }) => {
       style={{
         backgroundColor: variant === 'primary' ? 'rgba(81, 141, 175, 0.7)' : 'transparent',
         borderColor: 'grey',
-        borderRadius: '20px',
+        borderRadius: '10px',
+        borderWidth: '2px',
         color: variant === 'primary' ? 'white' : 'black',
         fontFamily: 'Montserrat',
         fontSize: '1.5rem',

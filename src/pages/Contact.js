@@ -1,71 +1,107 @@
-import React, { useEffect } from 'react';
-import emailjs from 'emailjs-com'; 
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
-import Buttons from "../components/Buttons"
+import React, { useEffect } from "react";
+import emailjs from "emailjs-com";
+import Form from "react-bootstrap/Form";
+import { useState } from "react";
+import Buttons from "../components/Buttons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faGlobe,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ContactForm = () => {
   useEffect(() => {
     // Initialization of emailjs library when the component mounts
-    emailjs.init('TvCVcf-8LplcR0SxE'); 
+    emailjs.init("TvCVcf-8LplcR0SxE");
   }, []);
 
   const [isFormSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // generate a five-digit number for the contact_number variable
-    event.target.contact_number.value = Math.random() * 100000 | 0;
-    // these IDs from the previous steps
-    emailjs.sendForm('service_tir50ql', 'contact_form', event.target) 
-      .then(function() {
-        console.log('SUCCESS!');
-        setFormSubmitted(true); // Set formSubmitted state to true on successful submission
-        // Reset form fields to empty strings after successful submission
-        event.target.from_name.value = '';
-        event.target.reply_to.value = '';
-        event.target.message.value = '';
-      }, function(error) {
-        console.log('FAILED...', error);
-      });
+  
+    const formElement = document.getElementById("contact-form"); // Replace with your form ID
+  
+    // These IDs from the previous steps
+    emailjs
+      .sendForm("service_tir50ql", "contact_form", formElement)
+      .then(
+        function () {
+          console.log("SUCCESS!");
+          setFormSubmitted(true); // Set formSubmitted state to true on successful submission
+          // Reset form fields to empty strings after successful submission
+          formElement.reset(); // Use reset() method to clear form fields
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   return (
     <div>
-      <h3>Contact me</h3>
-      <hr className="divider" /> 
-      
-      <div className='contactMe d-flex justify-content-center'>
-      <div className=''>
-      <Form id="contact-form" onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlForm.Control1">
-            <Form.Control type="hidden" name="contact_number" />
-            <Form.Label className='mt-5'>Name</Form.Label>
-            <Form.Control type="text" name="from_name" />
-            <Form.Label className='mt-4'>Email</Form.Label>
-            <Form.Control type="email" name="reply_to" />
-            <Form.Label className='mt-4'>Message</Form.Label>
-            <Form.Control className='mb-5' as="textarea" name="message" rows={3} /> 
-            <Buttons
-             
-              variant="primary"
-              onClick={handleSubmit}
-              
-            >
-              Submit
-            </Buttons>
-            {isFormSubmitted && <p>Form submitted successfully!</p>}
-          </Form.Group>
-        </Form>
-        <div className='privacy-note'>
-          Please note!<br/>
-          After you click the "Submit" button, every personal data you are entering (name, email, message) will be sent directly to my email address. <br/> 
-          Please rest assured that your data WILL NOT be shared with third parties.<br/>
-          Your privacy is important to me!
+      <h3>Contact Me</h3>
+      <hr className="divider" />
+      <div className="contact-container">
+        <div className="contact-info">
+          <div className="info-content">
+            <h3>Contact Information</h3>
+            <hr className="divider" />
+            <p>
+              <FontAwesomeIcon icon={faPhone} /> (959) 777-2737
+              <br />
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:godobashi@gmail.com">odobashigenci@gmail.com</a>
+              <br />
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> <a href="https://www.google.com/maps/place/5+Carillon+Dr,+Rocky+Hill,+CT+06067/@41.6554057,-72.6470037,17z/data=!3m1!4b1!4m6!3m5!1s0x89e64db40b123a13:0x43ab929e988be6cb!8m2!3d41.6554017!4d-72.6444288!16s%2Fg%2F11s5jd71ml?entry=ttu">5 Carillon Dr, Rocky Hill, CT</a>
+              <br />
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faGlobe} /> <a href="https://www.linkedin.com/in/genci-odobashi-692169149/">LinkedIn</a>
+            </p>
+          </div>
         </div>
-    </div>
-    </div>
+        <div className="contact-form">
+          <div className="form-content">
+            <Form id="contact-form" onSubmit={handleSubmit}>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlForm.Control1"
+              >
+                <Form.Control type="hidden" name="contact_number" />
+                <Form.Label>Full Name</Form.Label>
+                <Form.Control type="text" name="from_name" required />
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" name="reply_to" required />
+                <Form.Label>Message</Form.Label>
+                <Form.Control as="textarea" name="message" rows={3} required />
+                <Buttons variant="primary" onClick={handleSubmit}>
+                  Submit
+                </Buttons>
+                {isFormSubmitted && (
+                  <p className="form-success">Form submitted successfully!</p>
+                )}
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+      </div>
+      <div className="privacy-note">
+        Please note!
+        <br />
+        After you click the "Submit" button, every personal data you are
+        entering (name, email, message) will be sent directly to my email
+        address. <br />
+        Please rest assured that your data WILL NOT be shared with third
+        parties.
+        <br />
+        Your privacy is important to me!
+      </div>
     </div>
   );
 };
