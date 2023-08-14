@@ -1,6 +1,7 @@
 :root {
   align-items: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 
 body {
   margin: 0;
@@ -35,6 +36,13 @@ code {
   transition: 0.4s ease out;
 }
 
+@media screen and (max-width: 650px) {
+  .submit-data {
+    font-size: 1.2rem !important;
+    width: 200px !important;
+  }
+}
+
 /* Header.js */
 
 .navbar {
@@ -52,7 +60,6 @@ code {
   }
 }
 
-
 .nav-link {
   font-family: "Montserrat";
 }
@@ -61,11 +68,13 @@ code {
   text-decoration: underline;
 }
 
-/* Home.js */
-
 .name {
   color: white;
+  font-size: 2.5rem !important;
+  font-family: "Niconne";
+  font-weight: 100;
   margin: auto 80px;
+  
 }
 
 @media screen and (max-width: 470px) {
@@ -73,6 +82,26 @@ code {
     margin: auto;
   }
 }
+
+@media screen and (max-width: 870px) {
+  .name {
+    font-size: 2rem !important;
+  }
+}
+
+.nav-link {
+  font-size: 1.5rem !important;
+}
+
+.nav-link:hover {
+  color: #e3e2dc !important;
+  text-decoration: none;
+  text-shadow: 0 6px 10px rgb(0, 0, 0) !important;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Home.js */
 
 .home-page {
   align-items: center;
@@ -95,23 +124,51 @@ code {
   width: 100%;
 }
 
+@media screen and (max-width: 870px) {
+  .pPicture {
+    width: 200px;
+  }
+}
+
 .aboutMe {
   font-size: 1.5rem;
   margin: auto auto auto -100px;
   width: 60vw;
 }
 
+@media screen and (max-width: 870px) {
+  .home-page {
+    flex-direction: column; /* Stack items on top of each other */
+    height: auto; /* Adjust height for content */
+  }
+
+  .pPicture {
+    margin: 20px auto; /* Adjust margin for spacing */
+  }
+
+  .aboutMe {
+    font-size: 1.1rem;
+    margin: 20px auto; /* Adjust margin for spacing */
+    width: 90%; /* Limit paragraph width for readability */
+  }
+}
+
 /* Contact.js */
 
 .contact-container {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: auto;
   min-height: 50vh;
   padding: 10px;
-  /* background-color: #f7f5f5; */
   width: 80vw;
-  margin: auto;
+}
+
+@media screen and (max-width: 630px) {
+  .contact-info {
+    display: none;
+  }
 }
 
 .contact-info,
@@ -122,13 +179,13 @@ code {
 .info-content,
 .form-content {
   background-color: #F1F0E8;
-  color: black;
-  margin: 10px;
-  height: 55vh;
-  padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.455);
+  color: black;
+  height: 55vh;
+  margin: 10px;
   text-align: center;
+  padding: 30px; 
 }
 
 .info-content h3,
@@ -187,7 +244,18 @@ code {
   margin-bottom: 20px;
   position: fixed;
   right: 0;
-  width: 18%;
+  width: 30%;
+}
+
+@media screen and (max-width: 1000px) {
+  .myFooter {
+    position: relative;
+    width: 50%;
+  }
+  .icon {
+    font-size: 1.5rem;
+    height: 25px;
+  }
 }
 
 .contactIcons {
@@ -237,16 +305,16 @@ code {
 
 /* Resume.js */
 
-
 .img-fluid {
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
   /* margin: 0 50px; */
-  /* width: 350px; */
+  /* width: 400px; */
 }
 
 @media screen and (max-width: 767px) {
   .img-fluid {
    margin-top: 15px;
+   width: 400px;
   }
 }
