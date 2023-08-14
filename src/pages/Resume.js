@@ -5,8 +5,8 @@ import mongoPreview from "../assets/mongoPreview.png";
 import nodeXpressPreview from "../assets/nodeXpressPreview.png";
 import reactPreview from "../assets/reactPreview.png";
 import tailwindPreview from "../assets/tailwindPreview.png";
-import bootstrapPreview from "../assets/bootstrapPreview.png"
-import Buttons from "../components/Buttons"
+import bootstrapPreview from "../assets/bootstrapPreview.png";
+import Buttons from "../components/Buttons";
 
 function handleDownloadResume() {
   const url = "/Resume.pdf";
@@ -27,22 +27,25 @@ const secondRowImages = [
 
 function Resume() {
   return (
-    <div>
+    <div className="resume">
+      
       <h3>Find more about my skills and career</h3>
       <hr className="divider" />
-      <Buttons variant="primary" className="submit-data" onClick={handleDownloadResume}>
-            Download Resume
-          </Buttons>
+
+      {/* Download button */}
+      <Buttons
+        variant="primary"
+        className="submit-data"
+        onClick={handleDownloadResume}
+      >
+        Download Resume
+      </Buttons>
+
       {/* First row of images */}
       <ImageRow images={firstRowImages} />
 
       {/* Second row of images */}
       <ImageRow images={secondRowImages} />
-
-      {/* Download button */}
-      
-          
-        
     </div>
   );
 }
