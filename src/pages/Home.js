@@ -12,7 +12,7 @@ function Home() {
             <img src={profilePicture} alt="Profile Picture"></img>
           </div>
         </div>
-        <div className="about">
+        <div>
         <p className="aboutMe">
           I am a talented, ambitious, and hardworking individual, adept at
           handling multiple tasks on a daily basis competently, and at
