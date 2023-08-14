@@ -215,10 +215,6 @@ h4 {
   
 }
 
-.form-content p {
-  
-}
-
 .form-group {
   margin-bottom: 20px;
 }
@@ -244,7 +240,8 @@ h4 {
 }
 
 .privacy-note {
-  font-size: 0.7rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #6c757d;
   margin-top: 20px;
   line-height: 1.5;
