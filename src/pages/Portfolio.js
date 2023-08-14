@@ -14,7 +14,7 @@ function Portfolio() {
       title: "CubCare",
       imageSrc: cubCarePreview,
       description:
-        "CubCare is a childcare website where parents can match with babysitters, and can select babysitters to care for their children.",
+        "This is a childcare website where parents can meet babysitters for their children.",
       githubLink: "https://github.com/tcunningham203/babysitter-finder",
       liveLink: "https://cubcare-9dc4e13d9451.herokuapp.com/create-profile",
     },
@@ -30,7 +30,7 @@ function Portfolio() {
       title: "Bites N' Booze",
       imageSrc: bitesNBoozePreview,
       description:
-        "With the help of this website, you will be able to generate a dish or a cocktail recipe, based on the ingredients you like.",
+        "Feeling hungry or thursty? Click below and find your favorite recipe.",
       githubLink: "https://github.com/odobashigenci/Bites-n--booze",
       liveLink: "https://odobashigenci.github.io/Bites-n--booze/homepage.html",
     },
@@ -38,7 +38,7 @@ function Portfolio() {
       title: "Weather Dashboard",
       imageSrc: weatherDashboardPreview,
       description:
-        "This is a weather app useful to check the real time weather, and a 5-day forecast all around the world.",
+        "Check the real time weather and a 5-day forecast in your favorite city.",
       githubLink: "https://github.com/odobashigenci/Weather-Dashboard",
       liveLink: "https://odobashigenci.github.io/Weather-Dashboard/",
     },
@@ -46,14 +46,14 @@ function Portfolio() {
       title: "Password Generator",
       imageSrc: passwordGeneratorPreview,
       description:
-        "This is an app that will help you generate a very strong password, based on the criteria that you choose.",
+        "If you need a strong password click here 👇",
       githubLink: "https://github.com/odobashigenci/password-generator",
       liveLink: "https://odobashigenci.github.io/password-generator/",
     },
     {
       title: "Code Quiz",
       imageSrc: codeQuizPreview,
-      description: "Test you JavaScript skills using the Code-Quiz website.",
+      description: "Are you ready to test your JavaScript skills?",
       githubLink: "https://github.com/odobashigenci/Code-Quiz",
       liveLink: "https://odobashigenci.github.io/Code-Quiz/",
     },

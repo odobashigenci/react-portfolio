@@ -47,7 +47,7 @@ const ContactForm = () => {
       <div className="contact-container">
         <div className="contact-info">
           <div className="info-content">
-            <h3>Contact Information</h3>
+            <h4>Contact Information</h4>
             <hr className="divider" />
             <p>
               <FontAwesomeIcon icon={faPhone} /> (959) 777-2737
