@@ -12,6 +12,7 @@ function Home() {
             <img src={profilePicture} alt="Profile Picture"></img>
           </div>
         </div>
+        <div className="about">
         <p className="aboutMe">
           I am a talented, ambitious, and hardworking individual, adept at
           handling multiple tasks on a daily basis competently, and at
@@ -22,6 +23,7 @@ function Home() {
           realize that I have a strong connection with technology. My new
           passion is creating, styling, and maintaining apps and websites.
         </p>
+        </div>
       </div>
       <hr className="myRuler" />
     </div>

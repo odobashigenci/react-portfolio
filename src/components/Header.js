@@ -22,9 +22,11 @@ function Header() {
   return (
     <Router>
       <div className="d-flex justify-content-center">
-        <nav className="navbar navbar-expand-lg navbar-light m-4 p-3">
+        <nav className="navbar navbar-expand-lg navbar-light m-4 p-2">
           <div className="container-fluid">
-            <p className="navbar-brand text-white name">Genci Odobashi</p>
+          <p className="navbar-brand text-white name">
+              Genci Odobashi
+            </p>
             <button
               className="navbar-toggler"
               type="button"
