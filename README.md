@@ -21,7 +21,7 @@
   - [Link](#link)
   - [Preview](#preview)
   - [License](#license)
-  - [Questions and issues](#quesions) 
+  - [Questions and issues](#quesions)
 
   </br>
 
@@ -33,7 +33,7 @@
   
   ## Link
   
-  To lunch the app click here  👉  [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)](https://genciodobashi-portfolio.web.app/)
+  To lunch the app click here  👉  [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=yellow)](https://genciodobashi-portfolio.web.app/)
  
 
   </br>
@@ -46,7 +46,6 @@
   
   </div>
 
-    </br>
   
   ## License
   
@@ -54,9 +53,9 @@
   This application is covered under [MIT License](https://choosealicense.com/licenses/mit/)
   
   </br>
-  
+
  
-  ## Questions and Issues
+  ## Questions
   
   👇 For any questions or issues, feel free to contact me through the contact info provided below 👇
   
