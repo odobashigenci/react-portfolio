@@ -42,7 +42,7 @@
   
   <div align = "center">
   
-  ![Preview]()
+  ![Preview](src/assets/portfolioPreview.png)
   
   </div>
 
@@ -58,6 +58,8 @@
   ## Questions
   
   👇 For any questions or issues, feel free to contact me through the contact info provided below 👇
+
+  </br>
   
   ### GitHub account  
   
