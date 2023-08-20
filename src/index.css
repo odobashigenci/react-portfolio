@@ -57,8 +57,7 @@ h4 {
 /* Header.js */
 
 .navbar {
-  backdrop-filter: blur(1px);
-  background-color: rgba(81, 141, 175, 0.7);
+  background-color: #749bc2;
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.3rem;
@@ -241,17 +240,11 @@ h4 {
 }
 
 .privacy-note {
-  color: #6c757d;
   font-size: 1rem;
   font-weight: bold;
-  line-height: 1.5;
+  color: #6c757d;
   margin-top: 20px;
-}
-
-@media screen and (max-width: 870px) {
-  .privacy-note {
-    margin-top: 30px;
-  }
+  line-height: 1.5;
 }
 
 .privacy-note strong {
