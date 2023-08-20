@@ -22,9 +22,8 @@ const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
   
-    const formElement = document.getElementById("contact-form"); // Replace with your form ID
-  
-    // These IDs from the previous steps
+    const formElement = document.getElementById("contact-form"); 
+   
     emailjs
       .sendForm("service_tir50ql", "contact_form", formElement)
       .then(

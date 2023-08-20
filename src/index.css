@@ -57,12 +57,17 @@ h4 {
 /* Header.js */
 
 .navbar {
-  background-color: #749bc2;
+  backdrop-filter: blur(1px);
+  background-color: rgba(81, 141, 175, 0.7);
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.3rem;
   font-weight: bold;
   width: 100%;
+}
+
+.navbar:hover {
+  background-color: #749bc2;
 }
 
 @media screen and (max-width: 991px ) {
@@ -142,7 +147,6 @@ h4 {
 }
 
 .aboutMe {
-  /* font-family: Arial, Helvetica, sans-serif; */
   color: #73787d;
   font-family: "Monteserrat";
   font-size: 1.5rem;
@@ -153,18 +157,18 @@ h4 {
 
 @media screen and (max-width: 870px) {
   .home-page {
-    flex-direction: column; /* Stack items on top of each other */
-    height: auto; /* Adjust height for content */
+    flex-direction: column; 
+    height: auto; 
   }
 
   .pPicture {
-    margin: 20px auto; /* Adjust margin for spacing */
+    margin: 20px auto; 
   }
 
   .aboutMe {
     font-size: 1.1rem;
-    margin: 20px auto; /* Adjust margin for spacing */
-    width: 90%; /* Limit paragraph width for readability */
+    margin: 20px auto; 
+    width: 90%; 
   }
 }
 
@@ -215,9 +219,6 @@ h4 {
   
 }
 
-.form-content p {
-  
-}
 
 .form-group {
   margin-bottom: 20px;
@@ -226,7 +227,6 @@ h4 {
 .form-label {
   color: #5b5f63;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: bold; */
   margin-bottom: 5px;
 }
 
@@ -268,6 +268,10 @@ h4 {
   position: fixed;
   right: 0;
   width: 30%;
+}
+
+.myFooter:hover {
+  background-color: #749bc2;
 }
 
 @media screen and (max-width: 1000px) {
@@ -320,7 +324,7 @@ h4 {
   color: #6595c5 !important;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  /* font-weight: bold; */
+  
 }
 
 .carouselImage {
@@ -350,8 +354,6 @@ h4 {
 .img-fluid {
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
-  /* margin: 0 50px; */
-  /* width: 400px; */
 }
 
 @media screen and (max-width: 767px) {
