@@ -41,6 +41,13 @@ h4 {
   width: 50%;
 }
 
+.myRuler {
+  border-top: 3px solid;
+  color:rgb(10, 15, 14);
+  margin: 30px auto;
+  width: 70%;
+}
+
 .submit-data:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(-0.05rem);
