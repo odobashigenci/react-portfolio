@@ -21,7 +21,7 @@
   - [Link](#link)
   - [Preview](#preview)
   - [License](#license)
-  - [Questions and issues](#Questions and Issues) 
+  - [Questions and issues](#quesions) 
 
   </br>
 
@@ -33,7 +33,8 @@
   
   ## Link
   
-  To lunch the app click here  👉  ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)(https://genciodobashi-portfolio.web.app/)
+  To lunch the app click here  👉  [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)](https://genciodobashi-portfolio.web.app/)
+ 
 
   </br>
   
