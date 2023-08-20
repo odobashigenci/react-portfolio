@@ -19,6 +19,10 @@ function Header() {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  }
+
   return (
     <Router>
       <div className="d-flex justify-content-center">
@@ -46,7 +50,7 @@ function Header() {
               <ul className="navbar-nav ms-auto">
                 {navigationLinks.map((link, index) => (
                   <li className="nav-item" key={index}>
-                    <Link className="nav-link text-white" to={link.to}>
+                    <Link className="nav-link text-white" to={link.to} onClick={closeMenu}>
                       {link.label}
                     </Link>
                   </li>

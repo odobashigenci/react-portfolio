@@ -147,7 +147,7 @@ h4 {
 }
 
 .aboutMe {
-  color: #73787d;
+  color: #464a51;
   font-family: "Monteserrat";
   font-size: 1.5rem;
   font-weight: bold;
@@ -163,6 +163,7 @@ h4 {
 
   .pPicture {
     margin: 20px auto; 
+    
   }
 
   .aboutMe {
