@@ -42,10 +42,10 @@ function Resume() {
       </Buttons>
 
       {/* First row of images */}
-      <ImageRow images={firstRowImages} />
+      <ImageRow images={firstRowImages} direction="left-to-right" />
 
-      {/* Second row of images */}
-      <ImageRow images={secondRowImages} />
+{/* Second row of images */}
+<ImageRow images={secondRowImages} direction="right-to-left" />
     </div>
   );
 }

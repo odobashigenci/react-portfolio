@@ -1,14 +1,12 @@
 import React from "react";
 import ImageCard from "./ImageCard";
 
-const ImageRow = ({ images }) => {
+const ImageRow = ({ images, direction }) => {
   return (
-    <div className="d-flex justify-content-center space-between mx-5 my-5">
-      <div className="row">
-        {images.map((image, index) => (
-          <ImageCard key={index} {...image} />
-        ))}
-      </div>
+    <div className={`d-flex justify-content-center space-between mx-5 my-5 row bullet-shot-images ${direction}`}>
+      {images.map((image, index) => (
+        <ImageCard key={index} {...image} />
+      ))}
     </div>
   );
 };

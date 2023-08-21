@@ -370,3 +370,39 @@ h4 {
    width: 400px;
   }
 }
+
+/* Add these animations for the bullet-shot effect */
+@keyframes bulletShotLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bulletShotRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to image cards */
+.row.bullet-shot-images .image-card-wrapper {
+  opacity: 0;
+}
+
+.row.bullet-shot-images.left-to-right .image-card-wrapper {
+  animation: bulletShotLeftToRight 2s ease-out forwards;
+}
+
+.row.bullet-shot-images.right-to-left .image-card-wrapper {
+  animation: bulletShotRightToLeft 2s ease-out forwards;
+}
