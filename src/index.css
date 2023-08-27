@@ -34,6 +34,8 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* hr tag */
+
 .divider {
   border-top: 3px solid;
   color: rgb(10, 15, 14);
@@ -41,12 +43,16 @@ h4 {
   width: 50%;
 }
 
+/* About page hr tag */
+
 .myRuler {
   border-top: 3px solid;
   color:rgb(10, 15, 14);
   margin: 30px auto;
   width: 70%;
 }
+
+/* Buttons */
 
 .submit-data:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -65,7 +71,7 @@ h4 {
 
 .navbar {
   backdrop-filter: blur(1px);
-  background-color: rgba(81, 141, 175, 0.7);
+  background-color: rgba(81, 141, 175, 0.6);
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.3rem;
@@ -137,6 +143,8 @@ h4 {
   text-align: center;
 }
 
+/* Profile picture */
+
 .pPicture {
   margin: 30px auto;
   width: 250px;
@@ -153,6 +161,8 @@ h4 {
   }
 }
 
+/* Description text */
+
 .aboutMe {
   color: #464a51;
   font-family: "Monteserrat";
@@ -166,11 +176,6 @@ h4 {
   .home-page {
     flex-direction: column; 
     height: auto; 
-  }
-
-  .pPicture {
-    margin: 20px auto; 
-    
   }
 
   .aboutMe {
@@ -196,6 +201,20 @@ h4 {
   .contact-info {
     display: none;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.contact-info,
+.contact-form {
+  animation: fade-in 1s ease-in-out;
 }
 
 .contact-info,
@@ -258,30 +277,17 @@ h4 {
   line-height: 1.5;
 }
 
-.privacy-note strong {
-  color: #333;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
+@media screen and (max-width: 630px) {
+  .privacy-note {
+    margin: 30px 20px;
   }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Apply animation to labels */
-.contact-info,
-.contact-form {
-  animation: fade-in 2s ease-in-out;
 }
 
 /* Footer.js */
 
 .myFooter {
   backdrop-filter: blur(1px);
-  background-color: rgba(81, 141, 175, 0.7);
+  background-color: rgba(81, 141, 175, 0.6);
   border-radius: 50px;
   bottom: 0;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
@@ -372,6 +378,15 @@ h4 {
   visibility: hidden;
 }
 
+.fade-carousel .carousel-inner .carousel-item {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-carousel .carousel-inner .carousel-item.active {
+  opacity: 1;
+}
+
 /* Resume.js */
 
 .img-fluid {
@@ -384,40 +399,4 @@ h4 {
    margin-top: 15px;
    width: 400px;
   }
-}
-
-/* Add these animations for the bullet-shot effect */
-@keyframes bulletShotLeftToRight {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes bulletShotRightToLeft {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Apply animation to image cards */
-.row.bullet-shot-images .image-card-wrapper {
-  opacity: 0;
-}
-
-.row.bullet-shot-images.left-to-right .image-card-wrapper {
-  animation: bulletShotLeftToRight 2s ease-out forwards;
-}
-
-.row.bullet-shot-images.right-to-left .image-card-wrapper {
-  animation: bulletShotRightToLeft 2s ease-out forwards;
 }
