@@ -10,14 +10,14 @@ import codeQuizPreview from "../assets/codeQuizPreview.png";
 
 function Portfolio() {
   const projects = [
-    // {
-    //   title: "CubCare",
-    //   imageSrc: cubCarePreview,
-    //   description:
-    //     "This is a childcare website where parents can meet babysitters for their children.",
-    //   githubLink: "https://github.com/tcunningham203/babysitter-finder",
-    //   liveLink: "https://cubcare-9dc4e13d9451.herokuapp.com/create-profile",
-    // },
+    {
+      title: "CubCare",
+      imageSrc: cubCarePreview,
+      description:
+        "This is a childcare website where parents can meet babysitters for their children.",
+      githubLink: "https://github.com/tcunningham203/babysitter-finder",
+      liveLink: "https://cubcare-9dc4e13d9451.herokuapp.com/create-profile",
+    },
     {
       title: "Break My Intake",
       imageSrc: breakMyIntakePreview,
