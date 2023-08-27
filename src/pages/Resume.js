@@ -42,10 +42,10 @@ function Resume() {
       </Buttons>
 
       {/* First row of images */}
-      <ImageRow images={firstRowImages}/>
+      <ImageRow images={firstRowImages} className="firstRow" />
 
 {/* Second row of images */}
-<ImageRow images={secondRowImages}/>
+<ImageRow images={secondRowImages} className="secondRow" />
     </div>
   );
 }
