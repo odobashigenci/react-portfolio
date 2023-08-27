@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import Form from "react-bootstrap/Form";
-import { useState } from "react";
 import Buttons from "../components/Buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,30 +12,31 @@ import {
 
 const ContactForm = () => {
   useEffect(() => {
-    // Initialization of emailjs library when the component mounts
     emailjs.init("TvCVcf-8LplcR0SxE");
   }, []);
 
   const [isFormSubmitted, setFormSubmitted] = useState(false);
+  const [shouldAppear, setShouldAppear] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShouldAppear(true);
+    }, 100);
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
-    const formElement = document.getElementById("contact-form"); 
-   
-    emailjs
-      .sendForm("service_tir50ql", "contact_form", formElement)
-      .then(
-        function () {
-          console.log("SUCCESS!");
-          setFormSubmitted(true); // Set formSubmitted state to true on successful submission
-          // Reset form fields to empty strings after successful submission
-          formElement.reset(); // Use reset() method to clear form fields
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+    const formElement = document.getElementById("contact-form");
+    emailjs.sendForm("service_tir50ql", "contact_form", formElement).then(
+      function () {
+        console.log("SUCCESS!");
+        setFormSubmitted(true);
+        formElement.reset();
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
   };
 
   return (
@@ -44,7 +44,7 @@ const ContactForm = () => {
       <h3>Contact Me</h3>
       <hr className="divider" />
       <div className="contact-container">
-        <div className="contact-info">
+        <div className={`contact-info ${shouldAppear ? 'show' : ''}`}>
           <div className="info-content">
             <h4>Contact Information</h4>
             <hr className="divider" />
@@ -65,7 +65,7 @@ const ContactForm = () => {
             </p>
           </div>
         </div>
-        <div className="contact-form">
+        <div className={`contact-form ${shouldAppear ? 'show' : ''}`}>
           <div className="form-content">
             <Form id="contact-form" onSubmit={handleSubmit}>
               <Form.Group

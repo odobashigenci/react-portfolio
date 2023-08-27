@@ -262,6 +262,21 @@ h4 {
   color: #333;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply animation to labels */
+.contact-info,
+.contact-form {
+  animation: fade-in 2s ease-in-out;
+}
+
 /* Footer.js */
 
 .myFooter {
