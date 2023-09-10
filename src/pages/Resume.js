@@ -9,7 +9,7 @@ import bootstrapPreview from "../assets/bootstrapPreview.png";
 import Buttons from "../components/Buttons";
 
 function handleDownloadResume() {
-  const url = "/Resume.pdf";
+  const url = "/Resume.docx";
   window.open(url, "_blank");
 }
 
